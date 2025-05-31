@@ -8,7 +8,7 @@ import useFetch from "@/services/useFetch";
 import { fetchMovies } from "@/services/api";
 import { updateSearchCount } from "@/services/appwrite";
 
-import SearchBar from "@/components/searchBar";
+import SearchBar from "@/components/SearchBar";
 import MovieDisplayCard from "@/components/MovieCard";
 
 const Search = () => {
@@ -18,7 +18,7 @@ const Search = () => {
         data: movies = [],
         loading,
         error,
-        refetch: loadMovies,
+        fetchData: loadMovies,
         reset,
     } = useFetch(() => fetchMovies({ query: searchQuery }), false);
 
